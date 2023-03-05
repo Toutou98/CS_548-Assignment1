@@ -3,7 +3,7 @@
 
 ---
 
-1.
+### Task 1
   * a)
 
 		docker pull nginx:1.23.3
@@ -67,5 +67,47 @@
 	![7](task1/7.JPG)
 	
 
-2.
+### Task 2
+  * a)
+
+		Αρχικά τρέχουμε το container:
+		docker run -d --name task2 -p 8080:80 nginx:1.23.3-alpine
 		
+		Μετά ξεκινάμε ένα interactive session με το container και τρέχουμε το sh:
+		docker exec -it task2 sh
+	
+		Κάνω cd /usr/share/nginx/html και εκεί κάνω vi index.html για την επεξεργασία του κειμένου
+		
+	![1](task2/1.JPG)
+	![2](task2/2.JPG)
+		
+		Όπως βλέπουμε στο επόμενο screenshot ο Τίτλος όντως άλλαξε στο "Welcome to MY nginx!"
+		
+	![3](task2/3.JPG)
+	
+  * b)
+
+		Για να μεταφέρουμε το index.html από το container στον τοπικό υπολογιστή το κάνουμε με την εντολή:
+		docker cp task2://usr//share//nginx//html//index.html Documents//local-html//index.html
+		
+		Έπειτα του έκανα την αλλαγή ώστε ο τίτλος να λέει "Page downloaded locally, changed and uploaded this one in it's place"
+		και το ανέβασα πίσω στο container με την εντολή:
+		docker cp Documents//local-html//index.html task2://usr//share//nginx//html//index.html
+		
+	![4](task2/4.JPG)
+	
+		Όπως βλέπουμε στο επόμενο screenshot ο τίτλος όντως άλλαξε.
+	
+	![5](task2/5.JPG)
+	
+  * c)
+		
+		Διαγράφω το container με την εντολή:
+		docker rm -f task2
+		
+		Έπειτα το ξανατρέχω με την ίδια εντολή με πριν και όπως φαίνεται στο παρακάτω screenshot βλέπουμε πάλι την
+		default αρχική σελίδα της nginx επειδή όταν διαγράψαμε το container χάθηκαν οι αλλαγές που είχαμε κάνει
+		στο index.html και το νέο που φτιάξαμε ξεκίνησε πάλι στην default κατάσταση του.
+		
+	![6](task2/6.JPG)
+	
