@@ -114,11 +114,43 @@
 	
 ### Task 3
 
-        Άρχικά για να αντιγράψουμε το repository γράφουμε:
+        Άρχικά για να πάρουμε το repository και τα submodules γράφουμε:
         git clone https://github.com/chazapis/hy548
-        
+		git submodule init
+		git submodule update
+	
+	![1](task3/1.JPG)
+
         Έπειτα για την εγκατάσταση του hugo εκτελούμε:
-        go install -tags extended github.com/gohugoio/hugo@latest
+        choco install hugo  (Ο choco είναι ένας windows package manager)
+	
+		Μετά την εγκατάσταση του hugo μπορούμε να κάνουμε build με τη εντολή:
+		make
+		
+	![2](task3/2.JPG)
+	
+		Εκτελώ το container:
+		docker run -d --name local_548_site -p 8080:80 nginx:1.23.3-alpine
+		
+	![3](task3/3.JPG)
+	
+		Αντιγράφω τα αρχεία που παρήγαγε το make από το local μέσα στο container
+		docker cp public/. local_548_site://usr//share//nginx//html//
+		
+	![4](task3/4.JPG)
+
+		Όπως μπορούμε να δούμε στα παρακάτω screenshots βλέπουμε ότι έγινε το copy μέσα στο container
+		και στο localhost:8080 μπορούμε να δούμε πλέον την σελίδα του μαθήματος
+		
+	![5](task3/5.JPG)
+	
+	![6](task3/6.JPG)
+	
+		
+	
+	
+	
+	
 
 		
 		
