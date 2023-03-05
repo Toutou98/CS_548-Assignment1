@@ -111,3 +111,15 @@
 		
 	![6](task2/6.JPG)
 	
+	
+### Task 3
+
+        Άρχικά για να αντιγράψουμε το repository γράφουμε:
+        git clone https://github.com/chazapis/hy548
+        
+        Έπειτα για την εγκατάσταση του hugo εκτελούμε:
+        go install -tags extended github.com/gohugoio/hugo@latest
+
+		
+		
+  
