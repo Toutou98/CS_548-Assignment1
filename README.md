@@ -148,8 +148,37 @@
 
 	![6](task3/6.JPG)
 		
+### Task 4
+
+  * a)
+  	
+	![1](task4/1.JPG)
+		
+  * b)
+  		
+		Άρχικα κάνω build το Dockerfile και run για να ελέγξω ότι όλα δουλεύουν όπως θα έπρεπε. Το site λειτουργεί κανονικά επομένως προχωράω.
+  		Σύμφωνα με το documentation: https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
+		
+		Εκτελώ τις εντολές:
+		docker tag local548:1.0 toutou98/local548:1.0 για να βάλω το tag σύμφωνα με το dockerhub username μου
+		docker commit local548site toutou98/local548:1.0 για να κάνω commit τις αλλαγές στο container
+		docker push toutou98/local548:1.0 για να κάνω push το νέο image στο docker hub
+		
+	![2](task4/2.JPG)
 	
+		Όπως βλέπουμε και στο Docker Hub το νέο image έχει ανέβει επιτυχώς (έκανα και έλεγχο ότι το image που ανέβηκε δουλεύει ξανακατεβάζοντας και τρέχοντας το)
+		
+	![3](task4/3.JPG)
+		
+  * c)
+  
+  		Από το παρακάτω screenshot μπορούμε να δούμε πως το νέο Image έχει μέγεθος 340MB ενώ το αρχικό ήταν 142MB κάτι που είναι λογικό καθώς στο νέο image
+		κατέβασα το git και το make, καθώς και το git repo με το site του μαθήματος και το hugo για να γίνει build το project.
+	![5](task4/4.JPG)
 	
+  * d)
+		
+		Για να κρατήσω ο image όσο δυνατών μικρότερο έβαλα όλες τις εντολές σε ένα RUN command οπότε δημιουργεί 1 layer.
 	
 	
 
