@@ -123,7 +123,7 @@
 	![1](task3/1.JPG)
 
 		Έπειτα για την εγκατάσταση του hugo εκτελούμε:
-		choco install hugo  (Ο choco είναι ένας windows package manager)
+		choco install hugo-extended  (Ο choco είναι ένας windows package manager)
 
 		Μετά την εγκατάσταση του hugo μπορούμε να κάνουμε build με τη εντολή:
 		make
