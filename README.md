@@ -156,8 +156,10 @@
 		
   * b)
   		
-		Άρχικα κάνω build το Dockerfile και run για να ελέγξω ότι όλα δουλεύουν όπως θα έπρεπε. Το site λειτουργεί κανονικά επομένως προχωράω.
-  		Σύμφωνα με το documentation: https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
+		Άρχικα κάνω build το Dockerfile και run για να ελέγξω ότι όλα δουλεύουν όπως θα έπρεπε.
+		Το site λειτουργεί κανονικά επομένως προχωράω.
+  		Σύμφωνα με το documentation:
+			https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
 		
 		Εκτελώ τις εντολές:
 		docker tag local548:1.0 toutou98/local548:1.0 για να βάλω το tag σύμφωνα με το dockerhub username μου
