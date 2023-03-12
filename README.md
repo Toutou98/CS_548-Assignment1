@@ -31,7 +31,8 @@
 	
   * d)
 
-		Από την εντολή docker ps παραπάνω μπορούμε να δούμε ότι το container τρέχει καθώς στο status λέει up 2 seconds.
+		Από την εντολή docker ps παραπάνω μπορούμε να δούμε ότι το container τρέχει καθώς στο status 
+		λέει up 2 seconds.
 		
   * e)
 			
@@ -90,7 +91,8 @@
 		Για να μεταφέρουμε το index.html από το container στον τοπικό υπολογιστή το κάνουμε με την εντολή:
 		docker cp task2://usr//share//nginx//html//index.html Documents//local-html//index.html
 		
-		Έπειτα του έκανα την αλλαγή ώστε ο τίτλος να λέει "Page downloaded locally, changed and uploaded this one in it's place"
+		Έπειτα του έκανα την αλλαγή ώστε ο τίτλος να λέει:
+		"Page downloaded locally, changed and uploaded this one in it's place"
 		και το ανέβασα πίσω στο container με την εντολή:
 		docker cp Documents//local-html//index.html task2://usr//share//nginx//html//index.html
 		
@@ -105,9 +107,9 @@
 		Διαγράφω το container με την εντολή:
 		docker rm -f task2
 		
-		Έπειτα το ξανατρέχω με την ίδια εντολή με πριν και όπως φαίνεται στο παρακάτω screenshot βλέπουμε πάλι την
-		default αρχική σελίδα της nginx επειδή όταν διαγράψαμε το container χάθηκαν οι αλλαγές που είχαμε κάνει
-		στο index.html και το νέο που φτιάξαμε ξεκίνησε πάλι στην default κατάσταση του.
+		Έπειτα το ξανατρέχω με την ίδια εντολή με πριν και όπως φαίνεται στο παρακάτω screenshot βλέπουμε 
+		πάλι την default αρχική σελίδα της nginx επειδή όταν διαγράψαμε το container χάθηκαν οι αλλαγές 
+		που είχαμε κάνει στο index.html και το νέο που φτιάξαμε ξεκίνησε πάλι στην default κατάσταση του.
 		
 	![6](task2/6.JPG)
 	
@@ -158,8 +160,9 @@
   		
 		Άρχικα κάνω build το Dockerfile και run για να ελέγξω ότι όλα δουλεύουν όπως θα έπρεπε.
 		Το site λειτουργεί κανονικά επομένως προχωράω.
+		
   		Σύμφωνα με το documentation:
-			https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
+		https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
 		
 		Εκτελώ τις εντολές:
 		docker tag local548:1.0 toutou98/local548:1.0 για να βάλω το tag σύμφωνα με το dockerhub username μου
@@ -168,21 +171,22 @@
 		
 	![2](task4/2.JPG)
 	
-		Όπως βλέπουμε και στο Docker Hub το νέο image έχει ανέβει επιτυχώς (έκανα και έλεγχο ότι το image που ανέβηκε
-		δουλεύει ξανακατεβάζοντας και τρέχοντας το)
+		Όπως βλέπουμε και στο Docker Hub το νέο image έχει ανέβει επιτυχώς (έκανα και έλεγχο ότι το image
+		που ανέβηκεδουλεύει ξανακατεβάζοντας και τρέχοντας το)
 		
 	![3](task4/3.JPG)
 		
   * c)
   
-  		Από το παρακάτω screenshot μπορούμε να δούμε πως το νέο Image έχει μέγεθος 340MB ενώ το αρχικό ήταν 142MB
-		κάτι που είναι λογικό καθώς στο νέο image κατέβασα το git και το make, καθώς και το git repo με το site 
-		του μαθήματος και το hugo για να γίνει build το project.
+  		Από το παρακάτω screenshot μπορούμε να δούμε πως το νέο Image έχει μέγεθος 340MB ενώ το αρχικό
+		ήταν 142MB κάτι που είναι λογικό καθώς στο νέο image κατέβασα το git και το make, καθώς και το 
+		git repo με το site του μαθήματος και το hugo για να γίνει build το project.
 	![5](task4/4.JPG)
 	
   * d)
 		
-		Για να κρατήσω ο image όσο δυνατών μικρότερο έβαλα όλες τις εντολές σε ένα RUN command οπότε δημιουργεί 1 layer.
+		Για να κρατήσω ο image όσο δυνατών μικρότερο έβαλα όλες τις εντολές σε ένα RUN command οπότε 
+		δημιουργεί 1 layer.
 	
 	
 
