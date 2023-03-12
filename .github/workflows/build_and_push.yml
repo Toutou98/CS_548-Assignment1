@@ -43,5 +43,5 @@ jobs:
                 
           -
             name: Image build output
-            run: echo ${{ steps.docker_build.outputs.digest }}
+            run: echo ${{steps.docker_build.outputs.digest}}
             
