@@ -40,8 +40,4 @@ jobs:
                 file: ./task4/Dockerfile
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/local548:latest
-                
-          -
-            name: Image build output
-            run: echo ${{steps.docker_build.outputs.digest}}
             
