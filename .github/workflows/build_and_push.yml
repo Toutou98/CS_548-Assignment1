@@ -36,7 +36,7 @@ jobs:
             name: Build and push
             uses: docker/build-push-action@v4
             with:
-                context: ./task
+                context: ./task4
                 file: ./task4/Dockerfile
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/local548:latest
