@@ -199,8 +199,8 @@
 	![1](task5/1.JPG)
 	![2](task5/2.JPG)
 
-		2) Έπειτα δημιούργησα το workflow YAML file(μετά από μερικές προσπάθειες) το οποίο εκτελεί
-		ένα job μετά από κάθε push ή pull στο main branchκαι καλεί έναν ubuntu runner να τρέξει
+		2) Έπειτα δημιούργησα το workflow YAML file(μετά από μερικές προσπάθειες) το οποίο δημιουργεί
+		ένα workflow και έπειτα όταν ο χρήστης το τρέξει θα καλέσει έναν ubuntu runner να τρέξει
 		το job. Αυτός ο runner κάνει checkout στο branch, κάνει login στο dockerhub με την χρήση
 		του token και μετά login στο container registry του github. Κάνει setup το docker buildx
 		για να μπορέσει να κάνει build το Dockerfile και έπειτα push στο repo. Σύμφωνα με το output
