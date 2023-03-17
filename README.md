@@ -188,24 +188,25 @@
 		Για να κρατήσω ο image όσο δυνατών μικρότερο έβαλα όλες τις εντολές σε ένα RUN command οπότε 
 		δημιουργεί 1 layer.
 	
-	
+
 ### Task 5
-		
-		Για την δημιουργία του workflow έκανα τα εξής πράγματα:
-		
+
+  * 
+  	Για την δημιουργία του workflow έκανα τα εξής πράγματα:
+
 		1) Δημιούργησα ένα access token για το dockerhub account μου ώστε να μπορώ να κάνω push στο repo
-		
+
 	![1](task5/1.JPG)
 	![2](task5/2.JPG)
-	
+
 		2) Έπειτα δημιούργησα το workflow YAML file(μετά από μερικές προσπάθειες) το οποίο εκτελεί
-		   ένα job μετά από κάθε push ή pull στο main branchκαι καλεί έναν ubuntu runner να τρέξει
-		   το job. Αυτός ο runner κάνει checkout στο branch, κάνει login στο dockerhub με την χρήση
-		   του token και μετά login στο container registry του github. Κάνει setup το docker buildx
-		   για να μπορέσει να κάνει build το Dockerfile και έπειτα push στο repo. Σύμφωνα με το output
-		   του Github και ότι το νέο image έχει ανέβει στο dockerhub τότε το job εκτελέστηκε σωστά.
-		   Επίσης ελέγχω το localhost και η ιστοσελίδα του μαθήματος λειτουργεί κανονικά.
-		   
+		ένα job μετά από κάθε push ή pull στο main branchκαι καλεί έναν ubuntu runner να τρέξει
+		το job. Αυτός ο runner κάνει checkout στο branch, κάνει login στο dockerhub με την χρήση
+		του token και μετά login στο container registry του github. Κάνει setup το docker buildx
+		για να μπορέσει να κάνει build το Dockerfile και έπειτα push στο repo. Σύμφωνα με το output
+		του Github και ότι το νέο image έχει ανέβει στο dockerhub τότε το job εκτελέστηκε σωστά.
+		Επίσης ελέγχω το localhost και η ιστοσελίδα του μαθήματος λειτουργεί κανονικά.
+
 	![3](task5/3.JPG)
 	![4](task5/4.JPG)
 	![5](task5/5.JPG)
